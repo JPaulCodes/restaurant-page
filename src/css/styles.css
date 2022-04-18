@@ -15,7 +15,20 @@ body {
 h1 {
   text-align: center;
   font-size: 60px;
-  border: 1px solid black;
+}
+
+.top-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 main {
