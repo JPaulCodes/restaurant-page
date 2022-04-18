@@ -6,7 +6,7 @@
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
-body {
+#content {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -14,21 +14,20 @@ body {
 
 h1 {
   text-align: center;
-  font-size: 60px;
+  font-size: 3.5rem;
 }
 
 .top-nav ul {
   display: flex;
   justify-content: center;
+  list-style: none;
   gap: 10px;
 }
 
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
+.top-nav-link {
+  border: none;
+  background: none;
+  font-size: 1.3rem;
 }
 
 main {
