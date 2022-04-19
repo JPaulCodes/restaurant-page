@@ -1,30 +1,23 @@
 function generateHeader() {
   const header = document.createElement('header');
-  const restaurantName = document.createElement('h1');
-
-  restaurantName.innerText = 'Mozzafiato';
-  header.append(restaurantName);
-
-  return header;
-}
-
-function generateTopNav() {
   const topNav = document.createElement('nav');
   const navList = document.createElement('ul');
-  const navLinks = ['Home', 'About', 'Menu', 'Contact'];
+  const navLinks = ['Home', 'About', 'Menu', 'Booking', 'Contact'];
 
   navLinks.forEach((link) => {
     const listItem = document.createElement('li');
     const linkButton = document.createElement('button');
-    linkButton.textContent = link;
+    linkButton.innerText = link;
     linkButton.classList.add('top-nav-link');
     listItem.append(linkButton);
     navList.append(listItem);
   });
+
   topNav.classList.add('top-nav');
   topNav.append(navList);
+  header.append(topNav);
 
-  return topNav;
+  return header;
 }
 
 function generateMain() {
@@ -47,6 +40,5 @@ export default function initializePage() {
   const main = generateMain();
   const footer = generateFooter();
 
-  header.append(generateTopNav());
   content.append(header, main, footer);
 }
