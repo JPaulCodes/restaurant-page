@@ -1,4 +1,4 @@
-function generateHeader() {
+function createHeader() {
   const header = document.createElement('header');
   const topNav = document.createElement('nav');
   const navList = document.createElement('ul');
@@ -20,25 +20,19 @@ function generateHeader() {
   return header;
 }
 
-function generateMain() {
+function createMain() {
   const main = document.createElement('main');
-  main.innerText = 'Main';
 
   return main;
 }
 
-function generateFooter() {
+function createFooter() {
   const footer = document.createElement('footer');
-  footer.innerText = 'Footer';
 
   return footer;
 }
 
 export default function initializePage() {
   const content = document.querySelector('#content');
-  const header = generateHeader();
-  const main = generateMain();
-  const footer = generateFooter();
-
-  content.append(header, main, footer);
+  content.append(createHeader(), createMain(), createFooter());
 }
