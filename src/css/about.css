@@ -1,0 +1,42 @@
+.about .page-header {
+  text-align: center;
+  background-color: rgb(214, 214, 214);
+  min-height: 500px;
+}
+
+.about section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .section-1 .img-container,
+.about .section-2 .img-container {
+  display: flex;
+  align-items: center;
+}
+
+.about .section-1 .img-container :first-child,
+.about .section-2 .img-container :first-child {
+  width: 330px;
+  height: 530px;
+}
+
+.about .section-1 .img-container :last-child,
+.about .section-2 .img-container :last-child {
+  margin-left: -100px;
+  width: 330px;
+  height: 330px;
+}
+
+.about .section-1 .text-container,
+.about .section-2 .text-container {
+  max-width: 400px;
+}
+
+.about .divider-img-1 {
+  display: block;
+  height: 500px;
+  width: 100%;
+  background-color: rgb(207, 207, 207);
+}

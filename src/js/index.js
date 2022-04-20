@@ -1,4 +1,5 @@
 import '../css/home.css';
+import '../css/about.css';
 import initializePage from './initialize-page';
 import createAboutPage from './about';
 
