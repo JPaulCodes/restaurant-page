@@ -11,6 +11,8 @@ const navLinks = document.querySelectorAll('.top-nav-link');
 function changePage(page) {
   switch (page) {
     case 'Home':
+      main.className = 'home';
+      main.replaceChildren('Homepage');
       break;
     case 'About':
       main.className = 'about';
