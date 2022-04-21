@@ -1,5 +1,14 @@
+import bannerImage from '../img/about/about-banner.jpg';
+import aboutDivider from '../img/about/about-divider.jpg';
+import sectOneImg1 from '../img/about/lounge-pic.jpg';
+import sectOneImg2 from '../img/about/people-eating.jpg';
+import sectTwoImg1 from '../img/about/upstairs-bar.jpg';
+import sectTwoImg2 from '../img/about/wine-glasses.jpg';
+
 const sectionOneContent = [
   'section-1',
+  sectOneImg1,
+  sectOneImg2,
   'Get to know',
   'The finest recipes for those special moments in your life to celebrate',
   `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
@@ -9,6 +18,8 @@ const sectionOneContent = [
 
 const sectionTwoContent = [
   'section-2',
+  sectTwoImg1,
+  sectTwoImg2,
   'We offer',
   'Only the finest food and great service in our restaurant for you to enjoy',
   `Morbi non arcu risus quis. Elementum tempus donne egestas sed sed risus pretium quam vulputate. 
@@ -18,26 +29,34 @@ const sectionTwoContent = [
 
 function createPageBanner() {
   const pageBanner = document.createElement('div');
+  const bannerImg = document.createElement('img');
   const smallPara = document.createElement('p');
   const header = document.createElement('h1');
 
   pageBanner.classList.add('page-header');
+  bannerImg.src = bannerImage;
   smallPara.innerText = 'Get to know';
   header.innerText = 'About Us';
 
-  pageBanner.append(smallPara, header);
+  pageBanner.append(smallPara, header, bannerImg);
 
   return pageBanner;
 }
 
 function createDividerImg() {
+  const dividerImg = document.createElement('div');
   const img = document.createElement('img');
-  img.classList.add('divider-img-1');
 
-  return img;
+  dividerImg.classList.add('divider-img-1');
+  img.src = aboutDivider;
+  img.alt = 'A restaurant table ready for guests';
+
+  dividerImg.append(img);
+
+  return dividerImg;
 }
 
-function createSection(sectionClass, text, paraHeader, paraText) {
+function createSection(sectionClass, imgOne, imgTwo, text, paraHeader, paraText) {
   const section = document.createElement('section');
   const imgContainer = document.createElement('div');
   const leftImg = document.createElement('img');
@@ -50,6 +69,8 @@ function createSection(sectionClass, text, paraHeader, paraText) {
   section.classList.add(sectionClass);
   imgContainer.classList.add('img-container');
   textContainer.classList.add('text-container');
+  leftImg.src = imgOne;
+  rightImg.src = imgTwo;
   smallPara.textContent = text;
   header.textContent = paraHeader;
   para.textContent = paraText;
