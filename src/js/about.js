@@ -84,7 +84,7 @@ function createSection(sectionClass, imgOne, imgTwo, text, paraHeader, paraText)
   return section;
 }
 
-export default function createAboutPage() {
+export default function loadAbout() {
   const pageBanner = createPageBanner();
   const sectionOne = createSection(...sectionOneContent);
   const dividerImg = createDividerImg();

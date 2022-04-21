@@ -1,14 +1,14 @@
 import '../css/home.css';
 import '../css/about.css';
 import initializePage from './initialize-page';
-import createAboutPage from './about';
+import loadAbout from './about';
 
 initializePage();
 
 const main = document.querySelector('main');
 const navLinks = document.querySelectorAll('.top-nav-link');
 
-function changePage(page) {
+function loadPage(page) {
   switch (page) {
     case 'Home':
       main.className = 'home';
@@ -16,7 +16,7 @@ function changePage(page) {
       break;
     case 'About':
       main.className = 'about';
-      main.replaceChildren(...createAboutPage());
+      main.replaceChildren(...loadAbout());
       break;
     case 'Menu':
       break;
@@ -30,6 +30,6 @@ function changePage(page) {
 
 navLinks.forEach((link) => {
   link.addEventListener('click', () => {
-    changePage(link.innerText);
+    loadPage(link.innerText);
   });
 });
